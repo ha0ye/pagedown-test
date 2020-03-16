@@ -184,7 +184,6 @@ print_text_block(text_blocks, 'intro')
 ```
 
 
-
 Education {data-icon=university data-concise=true}
 --------------------------------------------------------------------------------
 
