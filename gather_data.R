@@ -21,6 +21,7 @@ if(using_googlesheets){
   
   position_data <- read_sheet(positions_sheet_loc, sheet = "positions")
   publications  <- read_sheet(positions_sheet_loc, sheet = "publications")
+  grants        <- read_sheet(positions_sheet_loc, sheet = "grants")
   skills        <- read_sheet(positions_sheet_loc, sheet = "language_skills")
   text_blocks   <- read_sheet(positions_sheet_loc, sheet = "text_blocks")
   contact_info  <- read_sheet(positions_sheet_loc, sheet = "contact_info", skip = 1)

@@ -143,11 +143,11 @@ if(PDF_EXPORT) {
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-Wildlife Ecology and Conservation<br />
+Health Science Center Libraries<br />
 University of Florida<br />
-110 Newins-Ziegler Hall<br />
-PO Box 110430<br />
-Gainesville FL 32611-0430 USA
+Communicore Building<br />
+1600 SW Archer Rd<br />
+Gainesville, FL 32610 USA
 
 ```{r}
 contact_info %>% 
@@ -229,6 +229,38 @@ publications %>%
 
 #print_section(position_data, 'academic_articles')
 ```
+
+Grants {data-icon=money-bill-wave}
+--------------------------------------------------------------------------------
+
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- print_text_block(text_blocks, 'grants_aside') -->
+<!-- ``` -->
+<!-- ::: -->
+
+```{r}
+grants %>% 
+  arrange(desc(year)) %>% 
+    glue_data(
+      "### {funder}",
+      " ",
+      "{grant_number}",
+      " - ",
+      "{amount}", 
+      " (",
+      "{role}",
+      ")",
+      "\n\n", 
+      "N/A", 
+      "\n\n", 
+      "N/A", 
+      "\n\n", 
+      "{year}", 
+      "\n\n\n"
+    )
+```
+
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
